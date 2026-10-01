@@ -1,0 +1,49 @@
+version: 1
+repo: kvnloo/SoL-Pi
+id: sol-pi
+kind: suite
+summary: Pi extension packaging four reusable efficiency mechanisms discovered through scaled auto-research loops.
+
+architecture:
+  subsystems:
+    - id: action-fusion
+      name: Action Fusion
+      kind: efficiency
+      summary: Combines an edit/write with predictable validation in one tool action while preserving Pi runtime authority.
+      paths: [src/, tests/]
+    - id: observation-pack
+      name: ObservationPack
+      kind: context
+      summary: Archives repeated large observations behind stable handles with exact paged recall.
+      paths: [src/, tests/]
+    - id: evidence-reducer
+      name: Evidence-Preserving Reducer
+      kind: compression
+      summary: Compresses long diagnostics only when retained quotations verify against archived source evidence.
+      paths: [src/, tests/]
+    - id: online-context-compact
+      name: Online Context Compact
+      kind: compression
+      summary: Triggers bounded native Pi compaction at completed-plan boundaries under context/economic pressure.
+      paths: [src/, tests/]
+    - id: configuration
+      name: Configuration and safety gates
+      kind: governance
+      summary: Keeps every mechanism opt-in, fail-open, and subordinate to Pi authentication/provider/runtime choices.
+      paths: [sol-pi.example.json, docs/configuration.md, scripts/]
+      depends_on: [action-fusion, observation-pack, evidence-reducer, online-context-compact]
+
+  implements_mechanisms: [sol-pi-action-fusion, sol-pi-observation-pack, sol-pi-evidence-reducer, sol-pi-online-context-compact]
+  provides_interfaces: []
+  consumes_interfaces: []
+  produces_representations: []
+  consumes_representations: []
+
+  boundaries:
+    owns: [Pi implementation of SoL-Pi mechanisms, mechanism configuration, local archives and verification guards]
+    not_here: [Pi runtime authority, provider authentication, canonical Zer0 architecture authority, cross-harness policy]
+
+  evidence:
+    docs: [README.md, docs/, agents-install.md]
+    tests: [tests/]
+    schemas: [sol-pi.example.json]
